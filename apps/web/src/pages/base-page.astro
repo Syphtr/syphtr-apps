@@ -1,0 +1,26 @@
+---
+import Layout from "../layouts/Layout.astro";
+import ReactComponent from "../components/ReactComponent.tsx";
+const title = "new page!";
+
+const body = "This is a body!";
+---
+
+<Layout title={title}>
+  <div>
+    <h1 class="title">{title}</h1>
+    <p class="body">{body}</p>
+  </div>
+  <ReactComponent client:load />
+  <a href="/">Back to home</a>
+</Layout>
+
+<style>
+  .title {
+    color: white;
+  }
+
+  .body {
+    color: white;
+  }
+</style>
